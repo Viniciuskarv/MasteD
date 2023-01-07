@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de tabelas</title>
+    <style>
+        table {
+            text-align: center;
+        }
+        .vermelho{
+            background-color: red;
+        }
+        .amarelo{
+            background-color: yellow;
+        }
+        .azul{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <hr>
+    
+    <table border="1px">
+        <tr>
+            <td>Nome</td>
+            <td>Idade</td>
+            <td>profissão</td>
+        </tr>
+        <tr>
+            <td>Vinicius</td>
+            <td>22</td>
+            <td>Estudante</td>
+        </tr>
+        <tr>
+            <td>Matheus</td>
+            <td>30</td>
+            <td>Designer</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table border="1px">
+        <colgroup>
+          <col class="vermelho">
+          <col class="amarelo">
+          <col class="azul">
+        </colgroup>
+        <tr>
+          <th>Nome</th>
+          <th>Idade</th>
+          <td>Profissao</td>
+        </tr>
+        <tr>
+          <td>Vinicius</td>
+          <td>40</td>
+          <td>Estudante</td>
+        </tr>
+        <tr>
+          <td>Matheus</td>
+          <td>20</td>
+          <td>Escritor</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table border="1px">
+        <tr>
+            <td rowspan="2">União de campo</td>  <!--Rowspan faz a união de linhas-->
+            <td>Campo 02</td>
+            <td>campo 03</td>
+        </tr>
+        <tr>
+            <td>campo 05</td>
+            <td>campo 06</td>
+        </tr>
+        <tr>
+            <td>Campo 07</td>
+            <td>campo 08</td>
+            <td>campo 09</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table border="1px">
+        <tr>
+            <td>campo 01</td>
+            <td>campo 02</td>
+            <td>campo 03</td>
+        </tr>
+        <tr>
+            <td colspan="2">Campo 4 e 5</td>
+            <td>campo 06</td>
+        </tr>
+        <tr>
+            <td>campo 07</td>
+            <td>campo 08</td>
+            <td>campo 09</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table border="1px" cellspacing="40px" cellpadding="20px">
+        <tr>
+            <td>Célula da tabela principal</td>
+        <td>
+            <table border="1px">
+                <tr>
+                    <td>Tabela embutida, célula 1</td>
+                    <td>Tabela Embutida, célula 2</td>
+                </tr>
+                <tr>
+                    <td>Tabela embutida, célula 3</td>
+                    <td>Tabela embutida, célula 4</td>
+                </tr>
+            </table>
+        </td>
+        </tr>
+
+    </table>
+
+    <hr>
+</body>
+</html>

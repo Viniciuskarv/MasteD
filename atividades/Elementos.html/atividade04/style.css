@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+}
+body {
+    background: #cfdcff;
+}
+header{
+    background-color: #FF7B54;
+    text-align: center;
+    margin: 10px 0; 
+
+}
+#container-topo {
+    margin: 0 15px;
+    background-color: #ffb36b96;
+    border-radius: 0 0 10px 10px;;
+}
+header h1{
+    font-size: 40px;
+}
+article img {
+    margin: 10px 0 0 25px;
+    border-radius: 0 0 10px 0;
+}
+article section {
+    width: 100%;
+    margin: 10px 0 0 30px;
+}
+article section p {
+    margin: 10px 60px 10px 0;
+}
+#containe-receita{
+    background-color: #f7c75681;
+    border-radius: 10px 10px 0 0;
+    margin: 15px;
+}
+#avaliacao {
+    background-color: #939b628a;
+    color: rgb(5, 45, 80);
+    margin-left: 30%;
+    border-radius: 5px;
+    padding: 10px;   
+}
+table {
+    text-align: center;
+}
+footer {
+    background: #62719b;
+    height: 80px;
+    text-align: center
+}
+.button {
+    background: #FF7B54;
+    border: #331409 solid;
+    color:rgb(0, 0, 0);
+    border-radius: 5px;
+}
