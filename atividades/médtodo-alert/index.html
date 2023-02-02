@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 – Introdução ao JavaScript</title>
+    <script type="text/javascript">
+        function soma() {
+            var a = parseFloat(document.getElementById('num1').value);
+            var b = parseFloat(document.getElementById('num2').value);
+            document.getElementById('resultado').value = a + b;
+            var resul = parseFloat(document.getElementById('resultado').value);
+            alert("O primeiro número é: " + a + "\nO segundo númeroé: " + b + "\nA soma dos dois é: " + resul)
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <h1>Calculadora de somas Javascript</h1>
+        </tr>
+        <tr>
+            <td>Primeiro número: </td>
+            <td><input type="text" name="num1" id="num1" /></td>
+        </tr>
+        <tr>
+            <td>Segundo número: </td>
+            <td><input type="text" name="num2" id="num2" /> </td>
+        </tr>
+        <tr>
+            <td>Resultado: </td>
+            <td><input type="text" name="resultado" id="resultado"disabled="" /></td>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Soma" onclick='soma();'/>
+            </td>
+        </tr>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+</body>
+</html>
