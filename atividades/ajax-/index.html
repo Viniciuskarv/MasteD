@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercício 1 - UD24</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function carregar() {
+            var url = 'https://news.google.com/rss?hl=pt-PT&gl=PT&ceid=PT:pt-150';
+            $.ajax({ url:"https://api.rss2json.com/v1/api.json?rss_url=" + url,type: 'GET',
+                success: function (data) {
+                    objeto_json = eval(data);
+                    // ler o conteúdo
+                    var frase = "";
+                    for (i = 0; i < objeto_json.items.length; i++){
+                        frase = frase + "Título: <b>" + objeto_json.items[i].title + "</b><br/>";
+                        frase = frase + objeto_json.items[i].description + "<br/>";
+                    }
+                    $("#caixa").html(frase);
+                },
+                error: function (xhr, status) {
+                    alert('Ocorreu um erro.');
+                }
+            });
+        }
+    </script>
+    <style>
+        #caixa {
+            width: 100%;
+            height: auto;
+            position: relative;
+            border: 1px solid cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="carregar()">Clique para ver as notícias</a>
+    <div id="caixa">
+        As notícias vão ser carregadas nesta caixa.
+    </div>
+</body>
+</html>
