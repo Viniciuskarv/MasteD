@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: absolute;
+            background-color: rgb(15, 56, 190);
+            width:250px;
+            left: 10%;
+            top: 10%;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.418);
+            font-size: large;
+            
+        }
+        .container div {
+            color: antiquewhite;
+        }
+        .container div input{
+            background-color: rgba(172, 223, 223, 0.24);
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function validadorName(id){
+            if ((nome.value.length < 3 ) || (nome.value.length > 13)){
+                respo("nome", "red")
+            } else {
+                respo("nome", "green")
+            }
+        }
+
+        function validadorEmail(id){
+            var re = /\S+@\S+\.\S+/
+            if(re.test(email.value) != true){
+                respo("email", "red")
+            }else{
+                respo("email", "green")
+            }
+        }
+        function validadorSenha(id){
+            var numeros = /([0-9])/;
+            var alfabeto = /([a-zA-Z])/;
+            var chEspeciais = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+
+            if(senha.value.length < 6) {
+                console.log('Minimum 6 length')
+                respo("senha", "red")
+                console.log('Fraco')
+            } else {  	
+                if((numeros.test(senha.value) == true) && (alfabeto.test(senha.value) == true) && (chEspeciais.test(senha.value) == true)){            
+                   respo("senha", "green")
+                   console.log('Forte')
+
+                } else {
+                    respo("senha", "red")
+                    console.log('Médio')
+                }
+            }
+        }
+        var clics = ""
+        function Mudador(){
+            var total = clics/2;
+            if (clics%2 == 0){
+                console.log('par');
+                var elementoaterar =document.getElementById('senha')
+                elementoaterar.setAttribute("type", "password");
+            }else{
+                var elementoaterar =document.getElementById('senha')
+                elementoaterar.setAttribute("type", "text");
+                console.log('impar');
+            }
+            console.log(clics)
+            clics ++
+        }
+        function respo(a , c){
+            if(c == "red"){
+                document.getElementById(a).style.border = "2px solid red";
+            }else{
+                document.getElementById(a).style.border = "3px solid green";
+            }
+        }
+    </script>
+
+
+    <div class="container">
+        <div>Nome:<input type="text" name="nome" id="nome" onkeypress="validadorName(this)"></div>
+        <br>
+        <div>Email:<input type="email" name="email" id="email" onchange="validadorEmail(this)"></div>
+        <br>
+        <div>Senha:<input type="text" name="senha" id="senha" onchange="validadorSenha(this)"></div>
+        <div><input type="checkbox" name="checkbox" onclick="Mudador()" id="checkbox">Esconder</div>
+        
+    </div>
+</body>
+</html>

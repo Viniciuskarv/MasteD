@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="text" id="tex" cols="30" rows="10"></textarea>
+    <button onclick="Textar()">Botão</button>
+    <script>
+        
+        function Textar() {
+            var texto = document.getElementById('tex').value;
+            if (texto == ""){
+                alert('O campo necessita de estar preenchido.');
+            }else{
+                alert('O valor é: '+ texto)
+            }
+        }
+    </script>
+</body>
+</html>

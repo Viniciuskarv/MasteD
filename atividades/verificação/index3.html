@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto"><br>
+    <button onclick="Func('1')">Adicionar</button>
+    <button onclick="Func('2')">Apagar</button>
+    <button onclick="Func('3')">Ver lista</button>
+    <script>
+        var lista = [];
+        function Func(f){
+            var texto = document.getElementById("texto").value;
+            switch (f){
+                case '1':
+                    var adicionar = lista.push(texto);
+                    console.log(texto);
+                    break;
+                case '2':
+                    lista = [];
+                    console.log('string reiniciada');
+                    break
+            }
+        }
+    </script>
+</body>
+</html>

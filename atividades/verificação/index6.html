@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: blueviolet;
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            border-radius: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="bola1" onmouseover="Invisivel('1')" onmouseout="visivel('1')"></div>
+    <div id="bola2" onmouseover="Invisivel('2')" onmouseout="visivel('2')"></div>
+    <div id="bola3" onmouseover="Invisivel('3')" onmouseout="visivel('3')"></div>
+    <div id="bola4" onmouseover="Invisivel('4')" onmouseout="visivel('4')"></div>
+    <div id="bola5" onmouseover="Invisivel('5')" onmouseout="visivel('5')"></div>
+    <div id="bola6" onmouseover="Invisivel('6')" onmouseout="visivel('6')"></div>
+    <div id="bola7" onmouseover="Invisivel('7')" onmouseout="visivel('7')"></div>
+    <div id="bola8" onmouseover="Invisivel('8')" onmouseout="visivel('8')"></div>
+    <div id="bola9" onmouseover="Invisivel('9')" onmouseout="visivel('9')"></div>
+    <script>
+        function Invisivel(v) {
+            document.getElementById("bola"+v).style.background = "transparent";
+        }
+        function visivel(v) {
+            document.getElementById("bola"+v).style.background = "  blueviolet";
+        }
+    </script>
+</body>
+</html>

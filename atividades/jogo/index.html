@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .CONTAINER{
+            margin: 50px;
+        }
+        .container{
+            display: flex;
+            
+        }
+        .container div {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(1, 2, 1, 0.137);
+            border: 1px solid black; 
+            margin: 5px;
+        }
+        .container div:hover{
+            background-color: rgba(0, 0, 0, 0.274);
+        }
+    </style>
+</head>
+<body>
+    <div class="CONTAINER">
+        <div class="container">
+            <div id="caixa1" onclick="MudarCor(1)"></div>
+            <div id="caixa2" onclick="MudarCor(2)"></div>
+            <div id="caixa3" onclick="MudarCor(3)"></div>            
+        </div>
+        <div class="container">
+            <div id="caixa4" onclick="MudarCor(4)"></div>
+            <div id="caixa5" onclick="MudarCor(5)"></div>
+            <div id="caixa6" onclick="MudarCor(6)"></div>            
+        </div>
+        <div class="container">
+            <div id="caixa7" onclick="MudarCor(7)"></div>
+            <div id="caixa8" onclick="MudarCor(8)"></div>
+            <div id="caixa9" onclick="MudarCor(9)"></div>
+        </div>
+    </div>
+    <script>
+        var jogador = "";
+        var jogador1 = "";
+        var jogador2 = "";
+        function MudarCor(v){
+            var total = jogador/2;
+            if (jogador%2 == 0 ){
+                jogador1 += v;
+                document.getElementById("caixa"+v).style.background= "Green";
+                console.log("Jogador 1 fez a jogada:"+jogador1)
+            }else{
+                jogador2 += v;
+                document.getElementById("caixa"+v).style.background= "red";
+                console.log("Jogador 2 fez a jogada:"+jogador2)
+            }
+            jogador ++
+        }
+    </script>
+</body>
+</html>

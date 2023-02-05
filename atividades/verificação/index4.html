@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Alugar()">Alugar</button>
+    <button onclick="Devolver()">Devolver</button>
+    <button onclick="Tracking()">Tracking</button>
+    <script>
+        var lista = ['sim','joão','harry potter']
+        function Alugar(){
+            var remov = lista.shift()
+            var adici = lista.unshift('sim');
+            console.log('Foi Adicionado o cliente');
+        }
+        function Devolver(){
+            var remov = lista.shift();
+            var adici = lista.unshift('não');
+            console.log('O cliente foi removido');
+        }
+        function Tracking(){
+            console.log('Alugado : '+lista[0]);
+            console.log('Último cliente : '+lista[1]);
+            console.log(lista);
+        }
+    </script>
+</body>
+</html>
