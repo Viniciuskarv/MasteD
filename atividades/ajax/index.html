@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <title>Document</title>
+    <style>
+        #Container{
+            height: 300px;
+            width: 300px;
+            background-color: rgb(65, 182, 182);
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div id="Container">rvsvs</div>
+    </div>
+    <button id="Ocultar">Ocultar</button><br>
+    <button id="Mostrar">Mostrar</button><br>
+    <button id="Desvanecer">Desvanecer</button><br>
+    <button id="Aparecer">Aparecer</button><br>
+    <button id="Meter-negrito">Meter a negrito</button><br>
+    <button id="Encolher">Encolher</button><br>
+    <button id="Tamanho-inicial">Tamanho inicial</button><br>
+    <button id="Remover-negrito">Remover negrito</button><br>
+    <input type="text" name="text" id="text" placeholder="inserir texto">
+    <button id="inserir">inserir</button>
+
+    <script>
+        $("#Ocultar").click(function(){
+            $("#Container").css("background","transparent");
+        })
+        $("#Mostrar").click(function(){
+            $("#Container").css("background"," rgb(65, 182, 182)");
+        })
+        $("#Desvanecer").click(function(){
+            $("#Container").remove();
+        })
+        $("#Aparecer").click(function(){
+            $("<div id='Container'></div>").appendTo("#top");
+        })
+        $("#Encolher").click(function(){
+            $("#Container").css("height","200px");
+            $("#Container").css("width","200px");
+        })
+        $("#Tamanho-inicial").click(function(){
+            $("#Container").css("height","300px");
+            $("#Container").css("width","300px");
+        })
+        $("#Meter-negrito").click(function(){
+            $("#Container").css("font-weight"," bold");
+        })
+        $("#Remover-negrito").click(function(){
+            $("#Container").css("font-weight","");
+        })
+        
+        $("#inserir").click(function(){
+            var text = $("#text").val();
+            $("#Container").text(text)
+            console.log(text)
+        })
+    </script>
+</body>
+</html>
