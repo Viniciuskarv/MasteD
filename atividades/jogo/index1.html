@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: rgb(20, 18, 18);
+        }
+        .container{
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.473);
+            padding: 50px;
+            top: 20%;
+            left: 20%;
+            text-align: center;
+            border-radius: 30px;
+        }
+        .container h2,p{
+            color: antiquewhite;
+        }
+        .resul{
+            color: antiquewhite;
+            font-size: 30px;
+        }
+        #BtnCalcular{
+            margin: 10px;
+            background-color: rgb(10, 70, 50);
+            color: antiquewhite;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #BtnCalcular:hover{
+            background-color: rgb(9, 58, 41);
+            padding: 11px;
+        }
+        .Campoidioma{
+            background-color: aliceblue;
+            color: black;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calcular despesas de viagem</h2>
+        <select name="NameHotel" id="NameHotel">
+            <option value="hotel5">Hotel Torre Mar</option>
+            <option value="hotel4">Hotel Costa Verde</option>
+            <option value="hotel3">Hotel Varzinn</option>
+            <option value="hotel2">Hotel Axis Vermar</option>
+        </select>
+        <span type="text" id="idioma" class="Campoidioma"></span>
+        <p>Data de chegada:</p>
+        <input type="date" name="date" id="dataInicial">
+        <p>Data de partida:</p>
+        <input type="date" name="date" id="dataFinal"><br>
+        <button id="BtnCalcular">Calcular</button><br>
+        <div class="resul">Preço total: 0  €</div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#NameHotel").change(function(){
+                var hotel = $(this).val();
+                if (hotel == "hotel5"){
+                    $("#idioma").text("Idioma: Inglês");
+                    console.log("Idioma: Inglês")
+                } else if (hotel == "hotel4"){
+                    $("#idioma").text("Idioma: Espanhol");
+                    console.log("Idioma: Espanhol")
+                } else if (hotel == "hotel3"){
+                    $("#idioma").text("Idioma: Francês");
+                    console.log("Idioma: Francês")
+                }else if (hotel == "hotel2"){
+                    $("#idioma").text("Idioma:Português");
+                    console.log("Idioma:Português")
+                }
+            })
+        });
+    </script>
+</body>
+</html>

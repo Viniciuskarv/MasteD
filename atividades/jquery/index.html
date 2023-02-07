@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="top">
-        <div id="Container">rvsvs</div>
+        <div id="Container"></div>
     </div>
     <button id="Ocultar">Ocultar</button><br>
     <button id="Mostrar">Mostrar</button><br>
@@ -32,16 +32,16 @@
 
     <script>
         $("#Ocultar").click(function(){
-            $("#Container").css("background","transparent");
+            $("#Container").hide(); // Esconder a div 
         })
         $("#Mostrar").click(function(){
-            $("#Container").css("background"," rgb(65, 182, 182)");
+            $("#Container").show(); // Mostra a div
         })
         $("#Desvanecer").click(function(){
-            $("#Container").remove();
+            $("#Container").fadeOut();   // desvanecer a div
         })
         $("#Aparecer").click(function(){
-            $("<div id='Container'></div>").appendTo("#top");
+            $("#Container").fadeIn(); // aparecer a div
         })
         $("#Encolher").click(function(){
             $("#Container").css("height","200px");
@@ -60,8 +60,7 @@
         
         $("#inserir").click(function(){
             var text = $("#text").val();
-            $("#Container").text(text)
-            console.log(text)
+            $("#Container").append(text);
         })
     </script>
 </body>
