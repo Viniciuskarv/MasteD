@@ -12,6 +12,6 @@ function ajax(){
         }
     }
 
-    xmlHttp.open('GET','arquivo.txt',true);
+    xmlHttp.open('POST','arquivo.txt',true);
     xmlHttp.send();
 }
