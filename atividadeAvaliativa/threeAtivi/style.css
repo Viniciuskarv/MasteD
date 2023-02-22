@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#MenuNav{
+    position:fixed;
+    width: 100%;
+    top: 10px;
+}
+#ColPrinc,#ColSegun{
+    background: rgb(218, 218, 218) ;
+    margin-top: 100px;
+}
+#caixa{
+    height: 700px;
+}
+#caixa a{
+    text-decoration: none;
+    color: black;
+}
+#caixa a:hover{
+    color: rgb(52, 111, 223);
+}
+#navbarSupportedContent a{
+    color: rgb(88, 88, 235);
+    font-size: 20px;
+}
+#navbarSupportedContent a:hover{
+    color: rgb(168, 43, 226);
+}
+#ColSegun h2{
+    text-align: center;
+    margin: 10px 0;
+}
+.edithover:hover{
+    width: 20px;
+    height: 20px;
+}
+.textfooter{
+    font-family: 'Courgette', cursive;
+    text-decoration: none
+}
