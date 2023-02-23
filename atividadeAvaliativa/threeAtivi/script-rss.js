@@ -23,10 +23,26 @@ window.onload = function() {
             };
             $("#caixa").html(frase);
 
-            $("#Carousel0").html('<img src="'+ objeto_json.items[0].enclosure.link +'" class="img-fluid rounded-start" alt="imgNoticia">');
-            $("#Carousel1").html('<img src="'+ objeto_json.items[1].enclosure.link +'" class="img-fluid rounded-start" alt="imgNoticia">');
-            $("#Carousel2").html('<img src="'+ objeto_json.items[2].enclosure.link +'" class="img-fluid rounded-start" alt="imgNoticia">');
+            var car1 = '<img src="'+ objeto_json.items[1].enclosure.link +'" class="img-fluid rounded" alt="imgNoticia">'
+            car1 += '<div class="carousel-caption d-none d-md-block">'
+            car1 += '<p>'+ objeto_json.items[1].title + '</p>'
+            car1 += '</div>'
+            
+            $("#Carousel0").html(car1);
 
+            var car2 = '<img src="'+ objeto_json.items[2].enclosure.link +'" class="img-fluid rounded" alt="imgNoticia">'
+            car2 += '<div class="carousel-caption d-none d-md-block">' 
+            car2 += '<p>'+ objeto_json.items[2].title + '</p>'
+            car2 += '</div>'
+           
+            $("#Carousel1").html(car2);
+
+            var car3 = '<img src="'+ objeto_json.items[3].enclosure.link +'" class="img-fluid rounded" alt="imgNoticia">'
+            car3 += '<div class="carousel-caption d-none d-md-block">'
+            car3 += '<p>'+ objeto_json.items[3].title + '</p>'
+            car3 += '</div>'
+            
+            $("#Carousel2").html(car3);
         }
     });
 }

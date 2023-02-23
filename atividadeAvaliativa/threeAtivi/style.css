@@ -11,8 +11,26 @@
     background: rgb(218, 218, 218) ;
     margin-top: 100px;
 }
+#carouselExampleDark{
+    margin: 15px 0 0 30px;
+}
+#Carousel img{
+    width: 800px;
+    height: 500px;
+}
+#Carousel p{
+    color: rgb(255, 255, 255);
+    background-color: rgba(5, 4, 4, 0.411);
+}
+#Carousel{
+    text-align: center;
+}
 #caixa{
-    height: 700px;
+    height: 600px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    padding: 10px;
+    background:rgba(55, 3, 122, 0.027) ;
 }
 #caixa a{
     text-decoration: none;
@@ -39,4 +57,15 @@
 .textfooter{
     font-family: 'Courgette', cursive;
     text-decoration: none
+}
+.carousel-indicators button{
+    border-radius: 5px;
+    width: 50px;
+    height: 4px;
+    border: 1px solid rgb(70, 43, 43);
+    margin:5px ;
+    background-color: rgb(255, 255, 255);
+}
+.carousel-indicators button:hover{
+    width: 55px;
 }
