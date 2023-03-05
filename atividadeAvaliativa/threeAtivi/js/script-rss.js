@@ -1,5 +1,7 @@
+
+
 // JavaScript para carregar e exibir notícias RSS 
-window.onload = function() {
+
     var url = 'https://rss.tecmundo.com.br/feed';
     $.ajax({ url:"https://api.rss2json.com/v1/api.json?rss_url=" + url,type: 'GET',
         success: function (data) {
@@ -23,6 +25,15 @@ window.onload = function() {
             };
             $("#caixa").html(frase);
 
+            var gallery = "";
+            for (i = 0; i < objeto_json.items.length; i++){
+                gallery += '<div class="col-3">'
+                gallery += '<a class="image-link" href="'+objeto_json.items[i].enclosure.link+'"><img src="'+objeto_json.items[i].enclosure.link+'" class="img-thumbnail"  alt="image-'+[i]+'"></a>'
+                gallery += '</div>'
+            }
+
+            $("#spanGallery").html(gallery)
+
             var car1 = '<img src="'+ objeto_json.items[1].enclosure.link +'" class="img-fluid rounded" alt="imgNoticia">'
             car1 += '<div class="carousel-caption">'
             car1 += '<a class="card-title" href="'+ objeto_json.items[1].link +'">'+ objeto_json.items[1].title + '</a>'
@@ -45,13 +56,13 @@ window.onload = function() {
             $("#Carousel2").html(car3);
         }
     });
-}
-$(document).ready(function() {
-    $('.image-link').magnificPopup({type:'image'});
-  });
+    
+
+
+
 // Alert
 //$(document).ready(function(){
-//    setTimeout(function(){
-//        alert('Boas-vindas ao website');
-//    },5000);
+ //  setTimeout(function(){
+ //      alert('Boas-vindas ao website');
+   //    },5000);
 //});
