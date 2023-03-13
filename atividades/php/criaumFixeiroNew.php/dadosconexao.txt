@@ -1,0 +1,4 @@
+IP : ::1
+Data e hora : 2023-03-10 01:51:18
+Port : 60553
+URL : /pasta/criaumFixeiroNew.php/
