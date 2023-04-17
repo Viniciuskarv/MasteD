@@ -1,0 +1,40 @@
+.containerLocation{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.815);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px black;
+    color: aliceblue;
+    text-shadow: 5px 5px 10px rgba(190, 189, 240, 0.534);
+}
+#mapid { 
+    border: 1px solid black;
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ContainerForm input, button, textarea{
+    background: transparent;
+    border-bottom: none;
+    border: 1px solid rgb(88, 88, 161);
+    color: aliceblue;
+    padding-left: 2px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+    border-radius: 5px;
+    
+}
+.ContainerForm label{
+    margin: 10px;
+    font-size: 20px;
+}
+.ContainerForm textarea{
+    margin: 30px;
+}
+.ContainerForm button{
+    padding: 11px;
+    border-radius: 30px;
+    width: 90px;
+}

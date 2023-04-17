@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#MenuNav{
+    position:fixed;
+    width: 100%;
+    top: 10px;
+    display: visible;
+}
+#containePRin{
+    margin-top: 100px;
+}
+#carouselExampleDark{
+    margin: 15px
+}
+#Carousel img{
+    max-width: 800px;
+    height: 500px;
+}
+#Carousel a{
+    text-decoration: 0;
+    font-size: 20px;
+    color: aliceblue;
+    text-shadow: 0 0 0.2em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0),0 0 0.2em rgb(0, 0, 0);
+}
+#Carousel a:hover{
+    color: rgb(127, 140, 255);
+}
+#Carousel{
+    text-align: center;
+}
+#caixa{
+    height: 700px;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    padding: 10px;
+    background:rgba(55, 3, 122, 0.027) ;
+}
+#caixa a{
+    text-decoration: none;
+    color: black;
+}
+#caixa a:hover{
+    color: rgb(52, 111, 223);
+}
+#navbarSupportedContent a{
+    color: rgb(88, 88, 235);
+    font-size: 20px;
+}
+#navbarSupportedContent a:hover{
+    color: rgb(168, 43, 226);
+}
+#ColSegun h2{
+    text-align: center;
+    margin: 10px 0;
+}
+.Gallery-001 img{
+    width: 200px;
+}
+.edithover:hover{
+    width: 20px;
+    height: 20px;
+}
+.textfooter{
+    font-family: 'Courgette', cursive;
+    text-decoration: none
+}
+.carousel-indicators button{
+    border-radius: 5px;
+    width: 50px;
+    height: 4px;
+    border: 1px solid rgb(70, 43, 43);
+    margin:5px ;
+    background-color: rgb(255, 255, 255);
+}
+.carousel-indicators button:hover{
+    width: 55px;
+    background-color: rgb(185, 126, 240);
+}
+
+.ContaineOcamento{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.89);
+    color: rgb(253, 253, 253);
+    padding: 20px 30px 50px 30px;
+    text-shadow: 5px 5px 10px rgb(70, 69, 122);
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px black;
+    min-width: 450px;
+}
+.ContainerInterno{
+    margin: 0 30px;
+}
+.ContainerInterno input, button, #total{
+    background: transparent;
+    border-radius: 0 20px 20px 0;
+    border-bottom: none;
+    border: 1px solid rgb(88, 88, 161);
+    color: aliceblue;
+    padding-left: 2px;
+    box-shadow: 5px 5px 10px black;
+}
+#btmsit{
+    background: transparent;
+    border-bottom: none;
+    border: 1px solid rgb(88, 88, 161);
+    color: rgb(240, 248, 255);
+    padding-left: 2px;
+    box-shadow: 5px 5px 10px black;
+    width: 150px;
+}
+#btnseco{
+    background: transparent;
+    border-bottom: none;
+    border: 1px solid rgb(88, 88, 161);
+    color: aliceblue;
+    padding-left: 2px;
+    box-shadow: 5px 5px 10px black;
+    width: 30px;
+}
+#total{
+    width: 320px;
+    height: 28px;
+}
+.ContainerInterno label{
+    margin: 5px;
+
+}
